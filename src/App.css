@@ -6,7 +6,20 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "founders-grotesk-light";
+  src: url("./fonts/FoundersGrotesk/FoundersGroteskXCond-Lt.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "neue-montreal";
+  src: url("./fonts/NeueMontreal/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue-montreal-light";
   src: url("./fonts/NeueMontreal/NeueMontreal-Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;

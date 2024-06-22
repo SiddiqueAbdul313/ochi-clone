@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "../App.css";
+import { RiMenu5Fill } from "react-icons/ri";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <div className="fixed z-[999] w-full px-4 py-4 sm:px-10 sm:py-6 md:px-20 md:py-8 font-['Neue Montreal'] flex justify-between items-center backdrop-blur-md">
       <svg
@@ -31,19 +38,40 @@ function Navbar() {
           fill="currentColor"
         ></path>
       </svg>
-      <div className="links flex flex-wrap gap-4 sm:gap-7 mt-4 sm:mt-0">
-        {["Services", "Insights", "About Us", "Contact"].map((item, index) => (
-          <a
-            key={index}
-            className={`text-base sm:text-lg md:text-md font-[neue-montreal] tracking-widest capitalize font-light ${
-              index === 3 ? "sm:ml-20 md:ml-32" : ""
-            } ${index === 1 ? "max-400:hidden" : ""}`}
-            href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+      <div className="links flex-wrap gap-4 mt-4 sm:mt-0 hidden sm:flex">
+          {["Services", "Insights", "About Us", "Contact"].map((item, index) => (
+            <a
+              key={index}
+              className={`text-base sm:text-lg md:text-xl font-[neue-montreal-light] tracking-widest capitalize ${
+                index === 3 ? "sm:ml-20 md:ml-32" : ""
+              }`}
+              href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+            >
+              {item}
+            </a>
+          ))}
+        </div>
+        <div className="sm:hidden flex items-center justify-center mt-4">
+          <button
+            className="text-base sm:text-lg md:text-xl font-[neue-montreal-light] tracking-widest capitalize"
+            onClick={toggleMenu}
           >
-            {item}
-          </a>
-        ))}
-      </div>
+            <RiMenu5Fill className="text-3xl"/>
+          </button>
+        </div>
+        {menuOpen && (
+          <div className="flex flex-col items-center mt-4">
+            {["Services", "Insights", "About Us", "Contact"].map((item, index) => (
+              <a
+                key={index}
+                className="text-base sm:text-lg md:text-xl font-[neue-montreal-light] tracking-widest capitalize mb-2"
+                href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        )}
     </div>
   );
 }

@@ -1,26 +1,25 @@
-function About() {
+
+
+function Footer() {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.1" className="w-full py-20 bg-[#ceeb67] rounded-tl-3xl rounded-tr-3xl text-black px-6 md:px-12 lg:px-20">
-      <h1 className="font-[neue-montreal] text-[6vw] tracking-wide md:text-[4vw] lg:text-[3.5vw] font-light leading-[5.5vw] md:leading-[4.5vw] ">
-        Ochi is a strategic partner for fast-growing tech businesses that need
-        to raise funds, sell products, explain complex ideas, and hire great
-        people.
-      </h1>
-      <div className="w-full flex flex-col md:flex-row gap-5 border-t-[1px] mt-20 pt-10 border-[#9aad53]">
-        <div className="w-full md:w-1/2">
-          <h1 className="text-[7vw] md:text-7xl ">Our approach:</h1>
-          <button className="p-2 md:px-10 md:py-6 mt-10 flex gap-5 md:gap-10 items-center bg-black rounded-full text-white uppercase">
-            Read More
-            <div className="w-3 h-3 bg-zinc-100 rounded-full"></div>
-          </button>
+    <div className="w-full h-screen  flex flex-col md:flex-row bg-zinc-900 py-10 md:py-20">
+      <div className="w-full md:w-1/2 flex leading-3 flex-col justify-between font-[founders-grotesk] uppercase mt-10 px-5 md:px-0">
+        <div className="heading text-center md:text-left">
+          <h1 className="text-[10vw] leading-[1rem] md:leading-[9rem] scale-x-75 tracking-wide">
+            Eye-
+          </h1>
+          <h1 className="text-[10vw] leading-tight md:leading-[9rem] scale-x-75 tracking-wide">
+            Opening
+          </h1>
         </div>
-        <div className="md:w-1/2 h-[70vh] relative bg-[#9aad53] flex justify-center items-center text-[#ceeb67]  overflow-hidden rounded-2xl">
-        <svg
+        <div className="flex justify-center md:justify-start">
+          <svg
             width="72"
             height="30"
             viewBox="0 0 72 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="mx-0 md:mx-20"
           >
             <path
               d="M9.8393 10.2032C4.22951 10.3257 -0.0459221 14.7356 0.000372391 20.2752C0.0412204 25.3548 4.57808 30.3608 10.6862 29.9226C15.5145 29.5768 19.9015 25.4119 19.8525 20.0057C19.8035 14.5995 15.1904 10.0916 9.8393 10.2032ZM9.89649 25.7005C6.87101 25.7005 4.39834 23.1144 4.40924 19.9839C4.39525 19.2507 4.52792 18.522 4.79947 17.8407C5.07102 17.1594 5.47597 16.5392 5.99056 16.0164C6.50515 15.4937 7.11902 15.0789 7.79613 14.7966C8.47324 14.5142 9.19995 14.3698 9.93362 14.372C10.6673 14.3742 11.3931 14.5228 12.0686 14.8092C12.744 15.0956 13.3554 15.514 13.8668 16.0398C14.3783 16.5656 14.7796 17.1882 15.0471 17.8711C15.3146 18.554 15.4429 19.2834 15.4246 20.0166C15.4409 23.1008 12.9111 25.7059 9.88832 25.7005H9.89649Z"
@@ -45,8 +44,34 @@ function About() {
           </svg>
         </div>
       </div>
+      <div className="w-full md:w-1/2 flex flex-col justify-between mt-10 md:mt-0 px-5 md:px-0">
+        <h1 className="text-[10vw] font-[founders-grotesk] scale-x-75 tracking-wide uppercase text-center md:text-left">
+          Presentations
+        </h1>
+        <div className="links flex flex-col md:flex-row justify-evenly mt-5 px-10 md:px-0">
+          <div className="flex flex-col gap-2 text-center md:text-left">
+            <a href="#" className="text-zinc-300">Instagram</a>
+            <a href="#" className="text-zinc-300">Facebook</a>
+            <a href="#" className="text-zinc-300">LinkedIn</a>
+          </div>
+          <div className="flex flex-col gap-2 text-center md:text-left">
+            <a href="#" className="text-zinc-300">Home</a>
+            <a href="#" className="text-zinc-300">Services</a>
+            <a href="#" className="text-zinc-300">Our Work</a>
+          </div>
+          <div className="flex flex-col gap-2 text-center md:text-left">
+            <a href="#" className="text-zinc-300">About Us</a>
+            <a href="#" className="text-zinc-300">Insights</a>
+            <a href="#" className="text-zinc-300">Contact Us</a>
+          </div>
+        </div>
+        <div className="text-zinc-300 text-center mt-10">
+          &copy; 2024 Abdul Siddiqui. All rights reserved. <br />
+          <a href="mailto:siddiqueabdul313@gmail.com" className="text-[#1a65b0]">siddiqueabdul313@gmail.com</a>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default About;
+export default Footer;
