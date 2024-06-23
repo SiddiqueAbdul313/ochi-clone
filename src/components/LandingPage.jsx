@@ -6,7 +6,12 @@ function LandingPage() {
   const headings = ["We Create", "Eye-Opening", "Presentations"];
 
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.70" className="w-full sm:h-screen bg-zinc-900 pt-1">
+    <div
+      data-scroll
+      data-scroll-section
+      data-scroll-speed="-0.55"
+      className="w-full sm:h-screen bg-zinc-900 pt-1"
+    >
       <div className="textstructure mt-20 px-4 sm:mt-28 sm:px-10 md:mt-40 md:px-20 lg:mt-52 lg:px-28">
         {headings.map((heading, index) => (
           <div key={index} className="masker">
@@ -16,7 +21,7 @@ function LandingPage() {
                   initial={{ width: 0 }}
                   animate={{ width: "9vw" }}
                   transition={{ ease: [0.68, -0.6, 0.32, 1.6], duration: 1.5 }}
-                  className="mr-1 rounded-sm w-[12vw] sm:w-[9vw] md:w-[7vw] h-[8vw] sm:h-[6vw] md:h-[4.5vw] relative bg-red-500 "
+                  className="mr-1 rounded-sm w-[12vw] sm:w-[9vw] md:w-[7vw] h-[8vw] sm:h-[6vw] md:h-[4.5vw] relative bg-red-500"
                 ></motion.div>
               )}
               <h1 className="flex uppercase h-full text-[12vw] sm:text-[9vw] md:text-[7vw] leading-[12vw] sm:leading-[9vw] md:leading-[7vw] font-[founders-grotesk]">

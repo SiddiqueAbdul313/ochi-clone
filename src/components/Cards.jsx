@@ -1,7 +1,8 @@
 import { cardData } from "../data/cardData";
 
 function Cards() {
-    return (
+  return (
+    <>
       <div className="w-full h-screen bg-zinc-200 flex flex-col md:flex-col lg:flex-row items-center sm:flex-row gap-5 px-10">
         <div className="cardcontainer w-full md:w-full sm:w-1/2 h-[50vh]">
           <div
@@ -29,7 +30,8 @@ function Cards() {
           ))}
         </div>
       </div>
-    );
-  }
-  
-  export default Cards;
+    </>
+  );
+}
+
+export default Cards;

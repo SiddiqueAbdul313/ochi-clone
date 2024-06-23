@@ -1,11 +1,47 @@
+import { useEffect, useState } from "react";
+import "../App.css";
+import { GoArrowUp } from "react-icons/go";
 
 
 function Footer() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="w-full h-screen  flex flex-col md:flex-row bg-zinc-900 py-10 md:py-20">
+    <div className="w-full sm:h-screen flex flex-col md:flex-row bg-zinc-900 py-10 md:py-20 relative">
+      {showScrollButton && (
+        <button
+          className="fixed bottom-10 z-50 flex items-center justify-center borderw sm:w-20 sm:h-20 right-10 bg-[#004d43] hover:bg-[#eeeeee] hover:text-black text-white px-4 py-2 rounded-full shadow-md"
+          onClick={scrollToTop}
+        >
+          <GoArrowUp className="sm:text-3xl"/>
+        </button>
+      )}
       <div className="w-full md:w-1/2 flex leading-3 flex-col justify-between font-[founders-grotesk] uppercase mt-10 px-5 md:px-0">
         <div className="heading text-center md:text-left">
-          <h1 className="text-[10vw] leading-[1rem] md:leading-[9rem] scale-x-75 tracking-wide">
+          <h1 className="text-[10vw] leading-[1rem] md:leading-[0.1rem] lg:leading-[3rem] xl:leading-[8rem] scale-x-75 tracking-wide">
             Eye-
           </h1>
           <h1 className="text-[10vw] leading-tight md:leading-[9rem] scale-x-75 tracking-wide">
