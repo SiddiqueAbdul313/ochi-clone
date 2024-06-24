@@ -34,11 +34,11 @@ function Marquee({ MarqueeText }) {
         <MdKeyboardDoubleArrowDown /> Scroll down <MdKeyboardDoubleArrowDown />
       </motion.span>
       <div className="text border-t-[1px] border-b-[1px] border-[#457d76] flex whitespace-nowrap">
-        {[...Array(4)].map((_, index) => (
+        {[...Array(3)].map((_, index) => (
           <motion.h1
             initial={{ x: "0%" }}
             animate={{ x: "-100%" }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 5 }}
             key={index}
             className="text-[32vw] sm:text-[24vw] font-[founders-grotesk] uppercase -mb-10 md:-mb-28 lg:-mb-36 pr-8 sm:pr-20"
           >

@@ -86,16 +86,19 @@ function Footer() {
         </h1>
         <div className="links flex flex-col md:flex-row justify-evenly mt-5 px-10 md:px-0">
           <div className="flex flex-col gap-2 text-center md:text-left">
+            <h4>C:</h4>
             <a href="#" className="text-zinc-300">Instagram</a>
             <a href="#" className="text-zinc-300">Facebook</a>
             <a href="#" className="text-zinc-300">LinkedIn</a>
           </div>
           <div className="flex flex-col gap-2 text-center md:text-left">
+            S:
             <a href="#" className="text-zinc-300">Home</a>
             <a href="#" className="text-zinc-300">Services</a>
             <a href="#" className="text-zinc-300">Our Work</a>
           </div>
           <div className="flex flex-col gap-2 text-center md:text-left">
+            <h4>R:</h4>
             <a href="#" className="text-zinc-300">About Us</a>
             <a href="#" className="text-zinc-300">Insights</a>
             <a href="#" className="text-zinc-300">Contact Us</a>

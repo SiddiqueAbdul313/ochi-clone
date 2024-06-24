@@ -32,7 +32,7 @@ function About() {
     <div
       data-scroll
       data-scroll-section
-      data-scroll-speed="-.12"
+      data-scroll-speed="-.08"
       className="w-full py-20 bg-[#ceeb67] rounded-tl-3xl rounded-tr-3xl text-black px-6 md:px-12 lg:px-20"
     >
       <h1 className="font-[neue-montreal] text-[6vw] tracking-wide md:text-[4vw] lg:text-[3.5vw] font-light leading-[5.5vw] md:leading-[4.5vw]">
@@ -43,7 +43,7 @@ function About() {
       <div className="w-full flex flex-col md:flex-row gap-5 border-t-[1px] mt-20 pt-10 border-[#9aad53]">
         <div className="w-full md:w-1/2">
           <h1 className="text-[7vw] md:text-7xl">Our approach:</h1>
-          <button className="p-2 md:px-10 md:py-6 mt-10 flex gap-5 md:gap-5 items-center bg-black rounded-full text-white uppercase">
+          <button className="p-2 md:px-6 md:py-4 mt-10 flex gap-5 md:gap-5 items-center bg-black rounded-full text-white uppercase">
             Read More
             <div className="w-10 h-10 flex items-center justify-center border-[1px] uppercase border-zinc-500 rounded-full">
             <GoArrowUpRight />
@@ -57,7 +57,7 @@ function About() {
             animate={controls}
             variants={{
               hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { duration: 1.5 } },
+              visible: { opacity: 1, transition: { duration: 1 } },
             }}
             className="w-full h-full flex justify-center items-center"
           >
